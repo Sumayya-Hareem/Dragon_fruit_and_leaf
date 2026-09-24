@@ -1,0 +1,22 @@
+# Virtual environment
+venv/
+
+# Dataset (download from Kaggle; not stored in the repo)
+archive/
+archive.zip
+cleaned.zip
+*.crdownload
+
+# Training outputs: model weights are large; keep plots/reports selectively
+outputs/**/*.pt
+checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Editor / OS
+.vscode/
+.ipynb_checkpoints/
+Thumbs.db
+.DS_Store

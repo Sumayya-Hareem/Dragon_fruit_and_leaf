@@ -1,0 +1,21 @@
+# --- Data exploration ---
+matplotlib>=3.8
+Pillow>=10.0
+
+# --- Core training stack (PyTorch) ---
+torch>=2.2
+torchvision>=0.17
+
+# --- Metrics & evaluation ---
+scikit-learn>=1.4
+seaborn>=0.13
+
+# --- Progress bars, utilities ---
+tqdm>=4.66
+
+# --- Notebook support (if working in Colab/Jupyter) ---
+ipykernel>=6.29
+
+# --- Export (for later mobile/deployment step, mirrors sugarcane project) ---
+onnx>=1.16
+onnxruntime>=1.17
