@@ -20,3 +20,4 @@ __pycache__/
 .ipynb_checkpoints/
 Thumbs.db
 .DS_Store
+*.png on its own would also hide sample_grid.png, so instead add the exact names: "ChatGPT Image*.png" and "Main@1x.png"
