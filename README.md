@@ -218,8 +218,8 @@ python find_near_duplicates.py --data_root Cleaned            # add --img_size 1
 
 ## Demo app
 
-A Streamlit app to try the trained models on your own photos (upload or camera), with side-by-side comparison
-of several arms and per-seed predictions.
+A Streamlit app to try the trained model on your own photos (upload or camera). It uses arm B, averaging
+the probabilities of all seeds found, and shows the predicted class, the confidence and the score for each class.
 
 ```bash
 pip install -r app/requirements.txt
@@ -228,7 +228,10 @@ streamlit run app/app.py
 ```
 
 Checkpoints are not stored in git. The app reproduces the training-time image preparation and always assigns
-one of the four classes, so an unrelated photo still gets a label.
+one of the four classes, so an unrelated photo still gets a label; below 60% confidence it says it is not sure.
+A background photo can be added as `app/assets/background.jpg` (see `app/assets/README.md`). Open the app
+with `?dev=1` (for example `http://localhost:8501/?dev=1`) to choose other arms, compare them and see the
+per-seed predictions.
 
 ## Repository layout
 
@@ -244,7 +247,8 @@ find_near_duplicates.py    near-duplicate and label-conflict audit
 arm_figures.py             per-arm summary figures
 notebooks/                 Colab notebook: runs the arms, twin-free scoring
 figures/                   arm_B.png, arm_E.png
-app/                       Streamlit demo (app.py, inference.py, models/)
+app/                       Streamlit demo (app.py, inference.py, models/, assets/)
+.streamlit/config.toml     dark theme for the demo
 ```
 
 ## Part of a larger series
