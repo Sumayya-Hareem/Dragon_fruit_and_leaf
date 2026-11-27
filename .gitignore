@@ -20,4 +20,18 @@ __pycache__/
 .ipynb_checkpoints/
 Thumbs.db
 .DS_Store
-*.png on its own would also hide sample_grid.png, so instead add the exact names: "ChatGPT Image*.png" and "Main@1x.png"
+ChatGPT Image*.png
+Main@1x.png
+
+# Resized dataset copies and unzipped data (never commit dataset images)
+Cleaned/
+cleaned/
+small/
+med/
+Cleaned.zip
+small.zip
+med.zip
+
+# Demo-app weights: copy them in locally, do not commit
+app/models/**/*.pt
+app/models/*.pt
